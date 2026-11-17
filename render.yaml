@@ -1,0 +1,7 @@
+services:
+  - type: web
+    name: ika-car-endless-runner
+    runtime: static
+    buildCommand: echo "Static site ready"
+    staticPublishPath: .
+    autoDeployTrigger: commit

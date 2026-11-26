@@ -3,6 +3,7 @@ export const CONFIG = {
   // Browser storage keys for player settings and scores.
   storage: {
     volume: 'velocityGameVolume',
+    musicVolume: 'velocityMusicVolume',
     graphics: 'velocityGraphics',
     climate: 'velocityClimate',
     jumpMode: 'velocityJumpMode',
@@ -22,37 +23,45 @@ export const CONFIG = {
   assets: {
     // Paths are relative to the project root.
     audio: {
-      engineStart: 'Sound/Car_Engine_Start_Sound.mp3',
-      engine: 'Sound/Car_Engine_Sound.mp3',
-      steering: 'Sound/Tyre_Squeal_Sound.mp3',
-      crash: 'Sound/Car_Crash_Sound.mp3',
-      thunder: 'Sound/Thunder_Sound.mp3',
-      rain: 'Sound/Rain_Sound.mp3',
-      snow: 'Sound/Snow_Sound.mp3',
-      daylight: 'Sound/DayLight_Sound.mp3',
-      night: 'Sound/Night_Sound.mp3',
-      vroom: 'Sound/Car_Vroom_Sound.mp3'
+      engineStart: 'sounds/car-engine-start.mp3',
+      engine: 'sounds/car-engine.mp3',
+      steering: 'sounds/tire-squeal.mp3',
+      crash: 'sounds/car-crash.mp3',
+      thunder: 'sounds/thunder.mp3',
+      rain: 'sounds/rain.mp3',
+      snow: 'sounds/snow.mp3',
+      daylight: 'sounds/daylight.mp3',
+      night: 'sounds/night.mp3',
+      vroom: 'sounds/car-vroom.mp3'
     },
+    music: [
+      'music/bg-music-1.mp3',
+      'music/bg-music-2.mp3',
+      'music/bg-music-3.mp3',
+      'music/bg-music-4.mp3',
+      'music/bg-music-5.mp3'
+    ],
     cars: [
-      { name: 'Supercar', type: 'Velocity coupe', file: 'Models/Car/Super_Car.glb' },
-      { name: 'Sedan', type: 'City cruiser', file: 'Models/Car/Sedan_Car.glb' },
-      { name: 'Incredible', type: 'Street machine', file: 'Models/Car/IncridableCar.glb' },
-      { name: 'Audi', type: 'Performance coupe', file: 'Models/Car/Audi_Car.glb' },
-      { name: 'Monster Truck', type: 'Off-road truck', file: 'Models/Car/Monster_Truck.glb' }
+      { name: 'Supercar', type: 'Velocity coupe', file: 'models/cars/supercar.glb' },
+      { name: 'Sedan', type: 'City cruiser', file: 'models/cars/sedan.glb' },
+      { name: 'Incredible', type: 'Street machine', file: 'models/cars/incredible-car.glb' },
+      { name: 'Audi', type: 'Performance coupe', file: 'models/cars/audi.glb' },
+      { name: 'Monster Truck', type: 'Off-road truck', file: 'models/cars/monster-truck.glb' }
     ],
     models: {
-      trees: ['Models/Tree/Tree.glb', 'Models/Tree/Tree2.glb'],
-      buildings: ['Models/Building/Building1.glb', 'Models/Building/Building2.glb', 'Models/Building/Apartament.glb', 'Models/Building/Gas_Station.glb', 'Models/Building/House1.glb', 'Models/Building/House2.glb'],
-      cloud: 'Models/Cloud/cloud.glb',
-      barriers: ['Models/Obscales/Concrete_Road_Barrier.glb', 'Models/Obscales/MultiRoad_Barriers.glb'],
-      streetLights: ['Models/StreetLight/StreetLight4.glb'],
-      speedPower: 'Models/Power/Speed_Power.glb'
+      trees: ['models/trees/tree-1.glb', 'models/trees/tree-2.glb'],
+      buildings: ['models/buildings/building-1.glb', 'models/buildings/building-2.glb', 'models/buildings/apartment.glb', 'models/buildings/gas-station.glb', 'models/buildings/house-1.glb', 'models/buildings/house-2.glb'],
+      cloud: 'models/clouds/cloud.glb',
+      barriers: ['models/obstacles/concrete-road-barrier.glb', 'models/obstacles/multi-road-barriers.glb'],
+      streetLights: ['models/street-lights/street-light-4.glb'],
+      speedPower: 'models/power-ups/speed-power.glb'
     },
-    images: { settings: 'Img/Setting_Icon.png', pause: 'Img/pause.png', resume: 'Img/resume.png' }
+    images: { settings: 'images/settings-icon.png', pause: 'images/pause.png', resume: 'images/resume.png' }
   },
   // Global audio level is multiplied by each sound's individual level.
   audio: {
     defaultVolume: 0.7,
+    defaultMusicVolume: 0.18,
     volume: {
       engineStart: 0.8,
       engine: 0.55,
